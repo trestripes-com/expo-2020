@@ -14,5 +14,6 @@ mkShell {
     git
 
     yarn
+    nodePackages.serve
   ];
 }

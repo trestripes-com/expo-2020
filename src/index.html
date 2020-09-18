@@ -8,26 +8,64 @@
 
   <title>gallery+</title>
 
+  <!-- Image link template to be reused. -->
+  <script id="link" type="text/html">
+    <a-entity
+      class="link"
+      geometry="primitive: plane; height: 2; width: 2"
+      look-at="[camera]"
+      material="shader: flat; src: ${thumb}"
+      event-set__1="_event: mouseenter; scale: 2.0 2.0 1"
+      event-set__2="_event: mouseleave; scale: 1 1 1"
+    ></a-entity>
+  </script>
+
 </head>
 <body>
 
   <a-scene>
-    <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-    <a-cylinder
-      position="1 0.75 -3"
-      radius="0.5"
-      height="1.5"
-      color="#FFC65D"
-      ></a-cylinder>
-    <a-plane
-      position="0 0 -4"
-      rotation="-90 0 0"
-      width="4"
-      height="4"
-      color="#7BC8A4"
-      ></a-plane>
-    <a-sky color="#ECECEC"></a-sky>
+
+    <a-assets>
+      <img
+        id="cubes-thumb"
+        crossorigin="anonymous"
+        src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
+    </a-assets>
+
+    <!-- images -->
+    <a-entity layout="type: circle; radius: 10; plane: xz">
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+    </a-entity>
+
+    <!-- camera -->
+    <a-entity position="0 0 0">
+      <a-entity camera look-controls>
+        <!-- cursor -->
+        <a-cursor
+          id="cursor"
+          event-set__1="_event: mouseenter; color: springgreen"
+          event-set__2="_event: mouseleave; color: black"
+          raycaster="objects: .link"
+        ></a-cursor>
+      </a-entity>
+    </a-entity>
+
   </a-scene>
 
 </body>
