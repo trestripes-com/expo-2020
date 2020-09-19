@@ -12,8 +12,11 @@ with import sources.nixpkgs {
 mkShell {
   buildInputs = [
     git
+    gnumake
 
     yarn
     nodePackages.serve
+
+    rclone
   ];
 }
