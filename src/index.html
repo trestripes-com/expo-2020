@@ -17,7 +17,14 @@
       material="shader: flat; src: ${thumb}"
       event-set__mouseenter="scale: 1.5 1.5 1"
       event-set__mouseleave="scale: 1 1 1"
+      onclick="clickLink(event)"
     ></a-entity>
+  </script>
+
+  <script>
+    function clickLink(event) {
+      console.log(event.target.parentElement.dataset['thumb'])
+    }
   </script>
 
 </head>
