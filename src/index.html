@@ -132,6 +132,7 @@
         <a-entity
           id="click-cursor"
           cursor="rayOrigin: mouse"
+          raycaster="objects: .link"
         >
         </a-entity>
         <a-entity
@@ -141,6 +142,7 @@
           geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
           material="color: #b2ff59; shader: flat"
           cursor
+          raycaster="objects: .link"
         >
           <a-animation
             begin="fusing"
