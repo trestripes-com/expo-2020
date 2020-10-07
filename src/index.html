@@ -15,8 +15,8 @@
       geometry="primitive: plane; height: 2; width: 2"
       look-at="[camera]"
       material="shader: flat; src: ${thumb}"
-      event-set__mouseenter="scale: 1.5 1.5 1"
-      event-set__mouseleave="scale: 1 1 1"
+      onmouseenter="mouseEnterLink(event)"
+      onmouseleave="mouseLeaveLink(event)"
       onclick="clickLink(event)"
     ></a-entity>
   </script>
@@ -26,6 +26,12 @@
       if (event.detail.cursorEl.id === "click-cursor") {
         console.log(event.target.parentElement.dataset['thumb'])
       }
+    }
+    function mouseEnterLink(event) {
+      event.target.object3D.scale.set(1.2, 1.2, 1.2);
+    }
+    function mouseLeaveLink(event) {
+      event.target.object3D.scale.set(1.0, 1.0, 1.0);
     }
   </script>
 
