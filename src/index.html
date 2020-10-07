@@ -28,9 +28,21 @@
       }
     }
     function mouseEnterLink(event) {
+      let cursorId = event.detail.cursorEl.id;
+      if (AFRAME.utils.device.isMobile() && cursorId !== "hover-cursor")
+        return;
+      if (!AFRAME.utils.device.isMobile() && cursorId !== "click-cursor")
+        return;
+
       event.target.object3D.scale.set(1.2, 1.2, 1.2);
     }
     function mouseLeaveLink(event) {
+      let cursorId = event.detail.cursorEl.id;
+      if (AFRAME.utils.device.isMobile() && cursorId !== "hover-cursor")
+        return;
+      if (!AFRAME.utils.device.isMobile() && cursorId !== "click-cursor")
+        return;
+
       event.target.object3D.scale.set(1.0, 1.0, 1.0);
     }
   </script>
@@ -150,13 +162,6 @@
           cursor
           raycaster="objects: .link"
         >
-          <a-animation
-            begin="fusing"
-            easing="ease-in"
-            attribute="scale"
-            fill="backwards"
-            from="1 1 1" to="0.2 0.2 0.2" dur="1500"
-          ></a-animation>
         </a-entity>
       </a-entity>
     </a-entity>
