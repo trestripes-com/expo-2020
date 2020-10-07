@@ -23,7 +23,9 @@
 
   <script>
     function clickLink(event) {
-      console.log(event.target.parentElement.dataset['thumb'])
+      if (event.detail.cursorEl.id === "click-cursor") {
+        console.log(event.target.parentElement.dataset['thumb'])
+      }
     }
   </script>
 
