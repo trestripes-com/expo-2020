@@ -24,7 +24,10 @@
   <script>
     function clickLink(event) {
       if (event.detail.cursorEl.id === "click-cursor") {
-        console.log(event.target.parentElement.dataset['thumb'])
+        let imageId = event.target.parentElement.dataset['thumb']
+        let url = document.getElementById(imageId.substring(1)).src
+        document.getElementById("spotlight-image").style['background-image'] =
+          "url(" + url + ")"
         document.getElementById("spotlight").style.display = "block"
       }
     }
@@ -70,7 +73,6 @@
     <div
       id="spotlight-image"
       style="
-        background-image: url('../assets/cubes.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
