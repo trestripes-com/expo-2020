@@ -30,6 +30,9 @@
           "url(" + url + ")"
         document.getElementById("spotlight").style.display = "block"
       }
+
+      let camera = document.getElementById("camera")
+      camera.attributes["look-controls"].nodeValue = "reverseMouseDrag: true; enabled: false;"
     }
     function mouseEnterLink(event) {
       let cursorId = event.detail.cursorEl.id;
@@ -52,6 +55,9 @@
 
     function mouseUp(event) {
       document.getElementById("spotlight").style.display = 'none'
+
+      let camera = document.getElementById("camera")
+      camera.attributes["look-controls"].nodeValue = "reverseMouseDrag: true; enabled: true;"
     }
   </script>
 
