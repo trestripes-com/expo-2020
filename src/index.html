@@ -23,31 +23,23 @@
 
   <script>
     function mouseDownLink(event) {
-      if (event.detail.cursorEl.id === "click-cursor") {
-        let imageId = event.target.parentElement.dataset['thumb']
-        let url = document.getElementById(imageId.substring(1)).src
-        document.getElementById("spotlight-image").style['background-image'] =
-          "url(" + url + ")"
-        document.getElementById("spotlight").style.display = "block"
-      }
+      let imageId = event.target.parentElement.dataset['thumb']
+      let url = document.getElementById(imageId.substring(1)).src
+      document.getElementById("spotlight-image").style['background-image'] =
+        "url(" + url + ")"
+      document.getElementById("spotlight").style.display = "block"
 
       let camera = document.getElementById("camera")
       camera.attributes["look-controls"].nodeValue = "reverseMouseDrag: true; enabled: false;"
     }
     function mouseEnterLink(event) {
-      let cursorId = event.detail.cursorEl.id;
-      if (AFRAME.utils.device.isMobile() && cursorId !== "hover-cursor")
-        return;
-      if (!AFRAME.utils.device.isMobile() && cursorId !== "click-cursor")
+      if (AFRAME.utils.device.isMobile())
         return;
 
       event.target.object3D.scale.set(1.2, 1.2, 1.2);
     }
     function mouseLeaveLink(event) {
-      let cursorId = event.detail.cursorEl.id;
-      if (AFRAME.utils.device.isMobile() && cursorId !== "hover-cursor")
-        return;
-      if (!AFRAME.utils.device.isMobile() && cursorId !== "click-cursor")
+      if (AFRAME.utils.device.isMobile())
         return;
 
       event.target.object3D.scale.set(1.0, 1.0, 1.0);
@@ -173,16 +165,6 @@
         <a-entity
           id="click-cursor"
           cursor="rayOrigin: mouse; fuse: false"
-          raycaster="objects: .link"
-        >
-        </a-entity>
-        <a-entity
-          id="hover-cursor"
-          only-mobile
-          position="0 0 -3"
-          geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
-          material="color: #b2ff59; shader: flat"
-          cursor="fuse: false"
           raycaster="objects: .link"
         >
         </a-entity>
