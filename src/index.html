@@ -17,12 +17,12 @@
       material="shader: flat; src: ${thumb}"
       onmouseenter="mouseEnterLink(event)"
       onmouseleave="mouseLeaveLink(event)"
-      onclick="clickLink(event)"
+      onmousedown="mouseDownLink(event)"
     ></a-entity>
   </script>
 
   <script>
-    function clickLink(event) {
+    function mouseDownLink(event) {
       if (event.detail.cursorEl.id === "click-cursor") {
         let imageId = event.target.parentElement.dataset['thumb']
         let url = document.getElementById(imageId.substring(1)).src
@@ -50,13 +50,14 @@
       event.target.object3D.scale.set(1.0, 1.0, 1.0);
     }
 
-    function spotlightClick(event) {
+    function mouseUp(event) {
       document.getElementById("spotlight").style.display = 'none'
     }
   </script>
 
 </head>
-<body>
+<body
+  onmouseup="mouseUp(event)">
 
   <div
     id="spotlight"
@@ -68,7 +69,6 @@
       position: fixed;
       display: none;
     "
-    onclick="spotlightClick(event)"
   >
     <div
       id="spotlight-image"
