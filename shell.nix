@@ -17,6 +17,8 @@ mkShell {
     yarn
     nodePackages.serve
 
+    epeg
+
     rclone
   ];
 }
