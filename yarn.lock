@@ -198,11 +198,6 @@ acorn@^6.4.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
   integrity sha512-ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==
 
-aframe-fit-texture-component@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/aframe-fit-texture-component/-/aframe-fit-texture-component-0.2.5.tgz#6d27c97e29049aade95cc47c895a3f41757928b7"
-  integrity sha512-oCs+qTVJKJV3EcpHg3RoVceVOoqfUV3CyeVRYR2Tvmr//ZhmAAyP3Ftzz2IT1zWa++9wzQ5u83mI3fvkHeVfiA==
-
 aframe-layout-component@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/aframe-layout-component/-/aframe-layout-component-5.3.0.tgz#6095464b78cb4c6d875bc80c19c77ead0139e37f"
