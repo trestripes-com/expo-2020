@@ -1,4 +1,4 @@
-# gallery-plus
+# expo-2020
 
 VR photo gallery
 
