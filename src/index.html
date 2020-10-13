@@ -100,6 +100,8 @@
 
     <a-assets>
       <img id="cubes-thumb" src="../assets/cubes.jpg">
+      <img id="vertical" src="../assets/vertical.jpg">
+      <img id="horizontal" src="../assets/horizontal.jpg">
     </a-assets>
 
     <!-- images -->
@@ -107,11 +109,10 @@
       <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
       <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
       <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
-
       <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
       <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
-      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
-      <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
+      <a-entity template="src: #link" data-thumb="#vertical" data-aspect="4/3"></a-entity>
+      <a-entity template="src: #link" data-thumb="#horizontal"></a-entity>
     </a-entity>
 
     <a-entity layout="type: circle; radius: 15; plane: xz" position="0 0 0">
