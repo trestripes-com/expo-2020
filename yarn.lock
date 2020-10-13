@@ -190,7 +190,7 @@ acorn@^6.4.1:
 
 "aframe-layout-component@https://github.com/trestripes-com/aframe-layout-component":
   version "1.1.0"
-  resolved "https://github.com/trestripes-com/aframe-layout-component#9cf2dee9ab0b8ed905e6c5ef678592e4a8cf27d9"
+  resolved "https://github.com/trestripes-com/aframe-layout-component#d6685836a1a034162b669b08c33c9e3f27185a94"
 
 aframe-look-at-component@^1.0.0:
   version "1.0.0"
