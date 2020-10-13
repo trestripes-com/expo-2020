@@ -198,12 +198,10 @@ acorn@^6.4.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
   integrity sha512-ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==
 
-aframe-event-set-component@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/aframe-event-set-component/-/aframe-event-set-component-5.0.0.tgz#6b855605de5097f713a7adcb0c6e371322efb5fd"
-  integrity sha512-O9Bhs8Qu2cEilXQ6F2xUxxJIbaZEA2atdIxTwq5qPHRHaIa+8ZghkirUBicNs92aHR9QQwk6ZnRx+SmBXi+B9Q==
-  dependencies:
-    debug "^2.6.9"
+aframe-fit-texture-component@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/aframe-fit-texture-component/-/aframe-fit-texture-component-0.2.5.tgz#6d27c97e29049aade95cc47c895a3f41757928b7"
+  integrity sha512-oCs+qTVJKJV3EcpHg3RoVceVOoqfUV3CyeVRYR2Tvmr//ZhmAAyP3Ftzz2IT1zWa++9wzQ5u83mI3fvkHeVfiA==
 
 aframe-layout-component@^5.3.0:
   version "5.3.0"
@@ -1174,7 +1172,7 @@ d@1, d@^1.0.1:
     es5-ext "^0.10.50"
     type "^1.0.1"
 
-debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.9:
+debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==

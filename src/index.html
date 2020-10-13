@@ -14,11 +14,12 @@
 
   <!-- Image link template to be reused. -->
   <script id="link" type="text/html">
-    <a-entity
+    <a-image
       class="link"
-      geometry="primitive: plane; height: 3; width: 3"
+      src="${thumb}"
       look-at="[camera]"
-      material="shader: flat; src: ${thumb}"
+      width="3"
+      fit-texture
       onmouseenter="mouseEnterLink(event)"
       onmouseleave="mouseLeaveLink(event)"
       onmousedown="mouseDownLink(event)"
@@ -111,7 +112,7 @@
       <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
       <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
       <a-entity template="src: #link" data-thumb="#cubes-thumb"></a-entity>
-      <a-entity template="src: #link" data-thumb="#vertical" data-aspect="4/3"></a-entity>
+      <a-entity template="src: #link" data-thumb="#vertical"></a-entity>
       <a-entity template="src: #link" data-thumb="#horizontal"></a-entity>
     </a-entity>
 

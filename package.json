@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "aframe": "^0.9.0",
-    "aframe-event-set-component": "^5.0.0",
+    "aframe-fit-texture-component": "^0.2.5",
     "aframe-layout-component": "^5.3.0",
     "aframe-look-at-component": "^1.0.0",
     "aframe-template-component": "^3.2.1"
