@@ -6,6 +6,7 @@ build:
 
 optimize-assets:
 	ls assets/ | xargs -I _ epeg --max 1920 assets/_ assets/_
+	jpegoptim -S 150 -T 30 assets/*
 
 deploy:
 	rclone --config rclone.conf sync dist/ space:ar.trestripes.com/

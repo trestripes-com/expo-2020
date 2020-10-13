@@ -18,6 +18,7 @@ mkShell {
     nodePackages.serve
 
     epeg
+    jpegoptim
 
     rclone
   ];
