@@ -23,7 +23,7 @@
       onmouseenter="mouseEnterLink(event)"
       onmouseleave="mouseLeaveLink(event)"
       onmousedown="mouseDownLink(event)"
-    ></a-entity>
+    ></a-image>
   </script>
 
   <script>
@@ -55,6 +55,10 @@
 
       let camera = document.getElementById("camera")
       camera.attributes["look-controls"].nodeValue = "reverseMouseDrag: true; enabled: true;"
+    }
+
+    function clickIg(event) {
+      window.location.href = "https://www.instagram.com/acryforkelp/"
     }
   </script>
 
@@ -100,6 +104,8 @@
     </a-sky>
 
     <a-assets>
+      <img id="ig-logo" src="../assets/instagram-logo.png">
+
       <img id="photo01" src="../assets/01.jpg">
       <img id="photo02" src="../assets/02.jpg">
       <img id="photo03" src="../assets/03.jpg">
@@ -155,6 +161,16 @@
       scale="3 3 0"
       align="center"
     ></a-text>
+
+    <a-image
+      id="ig"
+      class="link"
+      src="#ig-logo"
+      position="0 0 7"
+      onmouseenter="mouseEnterLink(event)"
+      onmouseleave="mouseLeaveLink(event)"
+      onclick="clickIg(event)"
+    ></a-image>
 
     <!-- images -->
     <a-entity rotation="0 -90 90">
