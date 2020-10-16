@@ -46,6 +46,8 @@
 
       let camera = document.getElementById("camera")
       camera.attributes["look-controls"].nodeValue = "reverseMouseDrag: true; enabled: false;"
+
+      gtag('event', 'page_view', { page_location: url });
     }
     function mouseEnterLink(event) {
       if (AFRAME.utils.device.isMobile())
@@ -68,6 +70,8 @@
     }
 
     function clickIg(event) {
+      gtag('event', 'page_view', { page_path: '/instagram' });
+
       window.location.href = "https://www.instagram.com/acryforkelp/"
     }
   </script>
