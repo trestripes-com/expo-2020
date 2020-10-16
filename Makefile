@@ -9,5 +9,5 @@ optimize-assets:
 	jpegoptim -S 150 -T 30 assets/*
 
 deploy:
-	rclone --config rclone.conf sync -P dist/ space:ar.trestripes.com/
+	rclone --config rclone.conf sync -P dist/ space:expo.trestripes.com/2020/
 .PHONY: deploy
