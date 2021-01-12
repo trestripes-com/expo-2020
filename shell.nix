@@ -1,13 +1,6 @@
-{ sources ? import ./nix/sources.nix }:
+{ pkgs ? import <nixpkgs> { } }:
 
-with { overlay = _: pkgs: {
-  niv          = import sources.niv { };
-}; };
-
-with import sources.nixpkgs {
-  overlays = [ overlay ];
-  config = { };
-};
+with pkgs;
 
 mkShell {
   buildInputs = [
