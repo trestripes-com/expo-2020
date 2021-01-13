@@ -68,12 +68,6 @@
       let camera = document.getElementById("camera")
       camera.attributes["look-controls"].nodeValue = "reverseMouseDrag: true; enabled: true;"
     }
-
-    function clickIg(event) {
-      gtag('event', 'page_view', { page_path: '/instagram' });
-
-      window.location.href = "https://www.instagram.com/acryforkelp/"
-    }
   </script>
 
 </head>
@@ -164,8 +158,6 @@
       <img id="photo44" src="../assets/44.jpg">
       <img id="photo45" src="../assets/45.jpg">
       <img id="photo46" src="../assets/46.jpg">
-
-      <img id="ig-logo" src="../assets/instagram-logo.png">
     </a-assets>
 
     <a-text
@@ -175,16 +167,6 @@
       scale="3 3 0"
       align="center"
     ></a-text>
-
-    <a-image
-      id="ig"
-      class="link"
-      src="#ig-logo"
-      position="0 0 7"
-      onmouseenter="mouseEnterLink(event)"
-      onmouseleave="mouseLeaveLink(event)"
-      onclick="clickIg(event)"
-    ></a-image>
 
     <!-- images -->
     <a-entity rotation="0 -90 90">
